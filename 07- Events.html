@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #image {
+            list-style-type: none;
+            padding: 0;
+        }   
+        .set {     
+         margin: 10px;
+        }
+        body
+        {
+            background-color: rgb(78, 70, 70);
+            color: rgb(224, 210, 193);
+        }   
+    </style>
+</head>
+<body>
+     <h2>Amazing images</h2>
+     <div>
+        <ul id="image">
+            <li id="one" class="set"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" height="200px" width="200px" alt="tree" "></li>
+            <li id="two" class="set"><img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/mountains-1867272_960_720.jpg" height="200px" width="200px" alt="mountains"></li>
+            <li id="three" class="set"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" height="200px" width="200px" alt="tree"></li>
+            <li id="four" class="set"><img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/mountains-1867272_960_720.jpg" height="200px" width="200px" alt="mountains"></li>
+            <li id="five" class="set"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" height="200px" width="200px" alt="tree" ></li>
+            <li id="six" class="set"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" height="200px" width="200px" alt="tree"></li>
+           <li><a href="https://www.youtube.com" target="_blank">Visit YouTube id="youtube</a></li>
+        </ul>
+     </div>
+
+     <script>
+          //document.getElementById('one').onclick = function (e) {
+           //alert("tree"); 
+          //}
+
+
+          document.getElementById('two').addEventListener('click',function () {
+            alert("two ankul")})
+
+            document.getElementById('two').addEventListener('click' ,function() {
+                console.log('w')
+            },false)
+
+            //event type, event timestamp , defaltprevent,
+            //traget,toElement, srcelement,current,
+            //clientx,clienty ,screenx,screeny
+            //altkey,ctrlkey,shiftkey, keycode
+       /*    document.getElementById('image').addEventListener('click',function () {
+             console.log("clicked inside the image"),false})
+                 
+        document.getElementById('four').addEventListener('click',function (e) {
+          console.log( "four clicked");
+         e.stopPropagation()
+        },false)
+
+document.getElementById('youtube').addEventListener('click',function (p) {
+   console.log("youtube clicked");
+    p.preventDefault();
+    p.stopPropagation();
+},false)*/
+
+document.getElementById('image').addEventListener('click',function (e) {
+    console.log(e.target.tagName);
+    if (e.target.tagName === 'IMG') {
+    console.log("e.target.id")
+
+    let removeIt = e.target.parentNode
+    removeIt.remove()
+    }
+})
+     </script>
+</body>
+</html>
