@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body style="background-color: gray;">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae minus, itaque molestiae, quas molestias quia dolorum, adipisci modi ducimus facilis atque pariatur. Consequatur at quod repellat voluptas odio eveniet laudantium quibusdam, quae dolore facere mollitia impedit accusantium nemo ipsum nobis obcaecati nesciunt voluptate porro perferendis dolor. Facere reiciendis ullam ea.    
+ 
+
+
+<script>
+    const requesturl = 'https://api.github.com/hiteshchoudhary/' ;
+   const xhr =  new XMLHttpRequest();
+   xhr.open('Get',requesturl);
+   xhr.onreadystatechange = function () {
+    console.log(xhr.readyState);
+    
+    if (xhr.readyState ===4){
+    //const data = JSON.parse(this.responseText);
+    console.log(typeof data)
+    console.log(data.follower);
+    
+}
+
+   };
+   xhr.send();
+</script>
+</body>
+</html>
